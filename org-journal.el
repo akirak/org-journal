@@ -92,7 +92,8 @@ org-journal. Use org-journal-file-format instead.")
     (replace-regexp-in-string
      "%m" "\\\\(?2:[0-9][0-9]\\\\)"
      (replace-regexp-in-string
-      "%Y" "\\\\(?1:[0-9]\\\\{4\\\\}\\\\)" format-string)))
+      "%Y" "\\\\(?1:[0-9]\\\\{4\\\\}\\\\)"
+      (regexp-quote format-string))))
    "\\'"))
 
 ; Customizable variables
